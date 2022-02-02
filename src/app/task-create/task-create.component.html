@@ -1,0 +1,50 @@
+<!-- Button trigger modal -->
+<button
+  type="button"
+  class="btn btn-success float-end"
+  data-toggle="modal"
+  data-target="#exampleModal"
+>
+  Add TASK
+</button>
+
+<div
+  class="modal fade"
+  id="exampleModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Create Task</h5>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col">Nom du chien</div>
+          <div class="col">
+            <input type="text" [(ngModel)]="dogName" />
+          </div>
+        </div>
+        <br />
+        <div class="row">
+          <div class="col">Tâche à faire</div>
+          <div class="col">
+            <textarea [(ngModel)]="dogTask"></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button
+          type="button"
+          class="btn btn-success"
+          data-dismiss="modal"
+          (click)="addTask()"
+        >
+          Save
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
